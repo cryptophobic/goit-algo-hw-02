@@ -3,7 +3,7 @@ from collections import deque
 
 if __name__ == "__main__":
     string = input("Будь ласка, введіть рядок для аналізу на те, чи є він паліндромом")
-    queue = deque(string.lower())
+    queue = deque(string.strip().lower())
     length = len(queue)
     for i in range(length // 2):
         if queue.popleft() != queue.pop():
